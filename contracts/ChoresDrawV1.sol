@@ -2,7 +2,6 @@
 /// @author: github.com/cliffoo
 pragma solidity ^0.8.0;
 
-
 import "./chainlink/ConfirmedOwner.sol";
 import "./chainlink/VRFV2WrapperConsumerBase.sol";
 
@@ -296,6 +295,7 @@ contract ChoresDrawV1 is VRFV2WrapperConsumerBase, ConfirmedOwner {
   Member functions
   ----------------------------------------
    */
+
   function addMember(string memory _name) external returns (uint256 memberId) {
     return addMember(_name, address(0));
   }
