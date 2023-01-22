@@ -114,6 +114,13 @@ contract ChoresDrawV1 is VRFV2WrapperConsumerBase, ConfirmedOwner {
   uint256 public numDraws = 0;
   Draw[] public draws;
 
+  // Member interpretation
+  struct MemberInterpretation {
+    string name;
+    address owner;
+    bool[] chores; // Index is chore id, value at index is participation in chore
+  }
+
   // Draw interpretation
   // A given Draw can produce an array of n DrawInterpretation,
   // where n is the number of chores in Draw.
@@ -201,9 +208,23 @@ contract ChoresDrawV1 is VRFV2WrapperConsumerBase, ConfirmedOwner {
 
   /**
   ----------------------------------------
-  Interpretation function
+  Interpretation functions
   ----------------------------------------
    */
+
+  function interpretMember(uint256 _memberId)
+    external
+    view
+    memberExists(_memberId)
+    returns (MemberInterpretation memory interpretation)
+  {
+    interpretation.name = members[_memberId].name;
+    interpretation.owner = members[_memberId].owner;
+    for (uint256 i = 0; i < numChores; i++) {
+      interpretation.chores[i] = members[_memberId].chores[i];
+    }
+    return interpretation;
+  }
 
   function interpretDraw(uint256 _drawIndex)
     external
