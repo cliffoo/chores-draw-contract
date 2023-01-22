@@ -1,0 +1,83 @@
+lockfileVersion: 5.4
+
+specifiers:
+  dotenv: ^16.0.3
+  truffle-plugin-verify: ^0.6.1
+
+devDependencies:
+  dotenv: 16.0.3
+  truffle-plugin-verify: 0.6.1
+
+packages:
+
+  /axios/0.26.1:
+    resolution: {integrity: sha512-fPwcX4EvnSHuInCMItEhAGnaSEXRBjtzh9fOtsE6E1G6p7vl7edEeZe11QHf18+6+9gR5PbKV/sGKNaD8YaMeA==}
+    dependencies:
+      follow-redirects: 1.15.2
+    transitivePeerDependencies:
+      - debug
+    dev: true
+
+  /circular/1.0.5:
+    resolution: {integrity: sha512-n4Sspha+wxUl5zeA3JYp1zFCjsLz2VfXIe2gRKNQBrIX+7iPdGcCGZOF8W8IULtllZ/aejXtySfdFFt1wy/3JQ==}
+    dev: true
+
+  /cli-logger/0.5.40:
+    resolution: {integrity: sha512-piXVCa0TLm/+A7xdVEhw7t4OSrsmJaZIekWcoGrVMY1bHtLJTXgiNzgHlKT0EVHQ14sCKWorQJazU7UWgZhXOQ==}
+    dependencies:
+      circular: 1.0.5
+      cli-util: 1.1.27
+    dev: true
+
+  /cli-regexp/0.1.2:
+    resolution: {integrity: sha512-L++cAQ5g0Nu6aV56B3uaR+c7jEGSAa4WApY1ZN7XiD8niJ5jRfXE/qvMwgz3uZBG0rft4hJS75Vpz2F3mSm4Mg==}
+    dev: true
+
+  /cli-util/1.1.27:
+    resolution: {integrity: sha512-Z6+zI0kIrqf9Oi+PmUm8J9AELp8bTf2vCLYseudYtdOPNJvzpNiExO95aHIm477IbPdu/8SE9Wvc/M1kJl4Anw==}
+    dependencies:
+      cli-regexp: 0.1.2
+    dev: true
+
+  /delay/5.0.0:
+    resolution: {integrity: sha512-ReEBKkIfe4ya47wlPYf/gu5ib6yUG0/Aez0JQZQz94kiWtRQvZIQbTiehsnwHvLSWJnQdhVeqYue7Id1dKr0qw==}
+    engines: {node: '>=10'}
+    dev: true
+
+  /dotenv/16.0.3:
+    resolution: {integrity: sha512-7GO6HghkA5fYG9TYnNxi14/7K9f5occMlp3zXAuSxn7CKCxt9xbNWG7yF8hTCSUchlfWSe3uLmlPfigevRItzQ==}
+    engines: {node: '>=12'}
+    dev: true
+
+  /follow-redirects/1.15.2:
+    resolution: {integrity: sha512-VQLG33o04KaQ8uYi2tVNbdrWp1QWxNNea+nmIB4EVM28v0hmP17z7aG1+wAkNzVq4KeXTq3221ye5qTJP91JwA==}
+    engines: {node: '>=4.0'}
+    peerDependencies:
+      debug: '*'
+    peerDependenciesMeta:
+      debug:
+        optional: true
+    dev: true
+
+  /querystring/0.2.1:
+    resolution: {integrity: sha512-wkvS7mL/JMugcup3/rMitHmd9ecIGd2lhFhK9N3UUQ450h66d1r3Y9nvXzQAW1Lq+wyx61k/1pfKS5KuKiyEbg==}
+    engines: {node: '>=0.4.x'}
+    deprecated: The querystring API is considered Legacy. new code should use the URLSearchParams API instead.
+    dev: true
+
+  /truffle-plugin-verify/0.6.1:
+    resolution: {integrity: sha512-9Wxscxtmv1njVJKmG9nywx19QZrQqXrdcgHQs/8SeGNts8VjP6K9/CWO0uCMnBcmuew42LjlgxYB7cajSWR0CA==}
+    dependencies:
+      axios: 0.26.1
+      cli-logger: 0.5.40
+      delay: 5.0.0
+      querystring: 0.2.1
+      tunnel: 0.0.6
+    transitivePeerDependencies:
+      - debug
+    dev: true
+
+  /tunnel/0.0.6:
+    resolution: {integrity: sha512-1h/Lnq9yajKY2PEbBadPXj3VxsDDu844OnaAo52UVmIzIvwwtBPIuNvkjuzBlTWpfJyUbG3ez0KSBibQkj4ojg==}
+    engines: {node: '>=0.6.11 <=0.7.0 || >=0.7.3'}
+    dev: true
